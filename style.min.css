@@ -190,7 +190,7 @@ main {
     margin: 0 0 .5rem;
 }
 
-.bizname, .bizaddr, .textC {
+.bizname, .bizaddr {
     font-size: .9rem;
     margin: .5rem 0 0;
     opacity: .8;
@@ -198,7 +198,7 @@ main {
     line-height: 1.5;
 }
 
-.sub {
+.sub, .textC {
     text-align: left;
     font-size: .9rem;
     margin: .5rem 0 0;
@@ -400,6 +400,62 @@ video {
 
 .label p {
     margin: 0;
+}
+
+.before-after-container {
+    position: relative;
+    width: 100%; /* или конкретная ширина */
+    height: auto;
+    margin-bottom: 10px; /* Добавляет отступ снизу */
+}
+
+.before-image, .after-image, .slider-button {
+    border-radius: 10px; /* закругление углов изображений и кнопки ползунка */
+}
+
+/* Убедитесь, что последний контейнер не имеет отступа снизу */
+.before-after-container:last-child {
+    margin-bottom: 0;
+}
+
+.before-image, .after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.before-image {
+    position: relative;
+}
+
+.after-image {
+    width: 50%; /* начальное положение */
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #ffffff; /* или любой другой цвет */
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #000000; /* или любой другой цвет */
+    border-radius: 50%;
+    transform: translateY(-50%);
 }
 
 footer {
